@@ -14,7 +14,7 @@ body,::placeholder {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding:40px 0;
 }
 .header div{
@@ -61,7 +61,7 @@ body,::placeholder {
   color:white;
 }
 .container {
-  max-width:1075px;
+  max-width:1136px;
   margin:0 auto;
 }
 .introducao h1 {
@@ -83,8 +83,51 @@ body,::placeholder {
 .tipoProdutos {
   display:flex;
   justify-content: space-between;
-  align-self: center;
+  align-items: center;
+  row-gap: 150px;
+}
+.tipoProdutos a{
+  font-weight: bold;
+  color:#2A7AE4;
+  font-size: 1rem;
 }
 .tipoProdutos a::after{
   content: " \1F86A";
+  transition: 0.3s;
+}
+.tipoProdutos a:hover::after{
+  margin-right: 3px;
+}
+.tipoProdutos h3 {
+  font-size: 2rem;
+  color:#464646;
+}
+.produtos {
+  margin-top:25px;
+  margin-bottom:64px;
+  display:flex;
+  gap:16px;
+}
+.produto h4 {
+  font-size: 0.875rem;
+}
+.produto p {
+  margin:5px 0 5px 0;
+}
+.produto a {
+  color:#2A7AE4;
+  font-weight: bold;
+}
+.produto a::before {
+  content:'';
+  width:0;
+  height:8px;
+  margin-right:3px;
+  margin-bottom: 2px;
+  display: inline-block;
+  background-color: #2A7AE4;
+  transition: 0.3s;
+}
+.produto a:hover::before {
+  width:8px;
 }
