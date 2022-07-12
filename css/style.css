@@ -38,7 +38,7 @@ body,::placeholder {
   background-image: url(../img/lupa.svg);
   width:18px;
   height:18px;
-  margin-right: 12px;
+  margin-right: 15px;
 }
 .header input:focus{
   outline: none;
@@ -47,6 +47,27 @@ body,::placeholder {
   padding:20px 80px;
   border:2px #2A7AE4 solid;
   color:#2A7AE4;
+  position: relative;
+  transition: 250ms;
+}
+.btnLogin:hover {
+  color:white;
+}
+.btnLogin::before {
+  position: absolute;
+  content: '';
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  transform: scaleY(0);
+  transform-origin:bottom;
+  transition: transform 250ms ease-in;
+  background-color: #2A7AE4;
+  z-index: -1;
+}
+.btnLogin:hover::before{
+  transform: scaleY(1);
 }
 
 /* Introdução */
@@ -55,6 +76,7 @@ body,::placeholder {
   height: 352px;
   background: url(../img/Hero.png) no-repeat center;
   margin-bottom:100px;
+  z-index: -2;
 }
 .introducao div {
   padding-top:155px;
@@ -75,8 +97,29 @@ body,::placeholder {
 .introducao a {
   display: inline-block;
   color:white;
-  background:#2A7AE4;
-  padding:16px;
+  padding:14px;
+  border:2px solid #2A7AE4;
+  position: relative;
+  z-index: 1;
+}
+.introducao a:hover {
+  color:white;
+}
+.introducao a:before {
+  position: absolute;
+  content: '';
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  transform: scaleY(1);
+  transform-origin:bottom;
+  transition: transform 250ms ease-in;
+  background-color: #2A7AE4;
+  z-index: -1;
+}
+.introducao a:hover:before {
+  transform: scaleY(0);
 }
 
 /* Produtos */
