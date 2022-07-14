@@ -174,3 +174,45 @@ body,::placeholder {
 .produto a:hover::before {
   width:8px;
 }
+
+/* Footer */
+.footer {
+  background-color: #EAF2FD;
+}
+.footerContainer {
+  padding:64px 0;
+  display:flex;
+  justify-content: center;
+  gap:112px;
+}
+.footerContainer nav ul {
+  display: flex;
+  flex-direction: column;
+  gap:24px;
+}
+.footerContainer nav ul li a {
+  color:#464646;
+}
+.footerContainer nav ul li a:hover{
+  color:#2A7AE4;
+}
+.footerContato {
+  width:560px;
+}
+.footerContato h3 {
+  color:#464646;
+  font-size: 1rem;
+}
+.footerContato input {
+  margin-top:10px;
+  display: block;
+  border:none;
+  border-radius:3px;
+  font-size: 1rem;
+  width:100%;
+}
+ .footerContato textarea {
+  display: block;
+  border:none;
+  width:100%;
+}
