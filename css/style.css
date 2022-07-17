@@ -7,7 +7,6 @@
 }
 body,::placeholder {
   font-family: 'Raleway',Arial, Helvetica, sans-serif;
-  padding-bottom:600px;
 }
 
 /* Header */
@@ -35,7 +34,7 @@ body,::placeholder {
 }
 .barraPesquisa::after{
   content: '';
-  background-image: url(../img/lupa.svg);
+  background-image: url("../img/lupa.svg");
   width:18px;
   height:18px;
   margin-right: 15px;
@@ -74,7 +73,7 @@ body,::placeholder {
 .introducao {
   width:100%;
   height: 352px;
-  background: url(../img/Hero.png) no-repeat center;
+  background: url("../img/Hero.png") no-repeat center;
   margin-bottom:100px;
   z-index: -2;
 }
@@ -178,6 +177,7 @@ body,::placeholder {
 /* Footer */
 .footer {
   background-color: #EAF2FD;
+  z-index: -1;
 }
 .footerContainer {
   padding:64px 0;
@@ -205,14 +205,64 @@ body,::placeholder {
 }
 .footerContato input {
   margin-top:10px;
+  margin-bottom:16px;
   display: block;
   border:none;
   border-radius:3px;
   font-size: 1rem;
   width:100%;
+  padding:12px 0px 12px 8px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
  .footerContato textarea {
   display: block;
+  border-radius:3px;
+  font-size: 1rem;
   border:none;
   width:100%;
+  height: 82px;
+  resize: none;
+  padding:12px 0px 12px 8px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+.footerContato input, textarea:focus {
+  outline: none;
+}
+.footerContato a {
+  display: inline-block;
+  color:white;
+  padding:16px;
+  border:2px #2A7AE4 solid;
+  margin-top:8px;
+  position: relative;
+  z-index: 0;
+  transition:0.3s;
+}
+.footerContato a:before {
+  position: absolute;
+  content: '';
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  transform: scaleY(1);
+  transform-origin:bottom;
+  transition: transform 250ms ease-in;
+  background-color: #2A7AE4;
+  z-index: -1;
+}
+.footerContato a:hover {
+  color:#2A7AE4;
+}
+.footerContato a:hover::before{
+  transform: scaleY(0);
+}
+.dev {
+  padding:30px 0px;
+  background-color: white;
+}
+.footer p, small {
+  color:#464646;
+  display: block;
+  text-align: center;
 }
